@@ -9,7 +9,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //enumClasses()
-        nestedAndInnerClasses()
+        //nestedAndInnerClasses()
+        classInheritance()
     }
 
     enum class Direction(val dir: Int) {
@@ -58,5 +59,18 @@ class MainActivity : AppCompatActivity() {
         val myInnerClass = MyNestedAndInnerClass().MyInnerClass()
         val sumTwo = myInnerClass.sumTwo(10)
         println("The result of the sum is: $sumTwo")
+    }
+
+    private fun classInheritance(){
+        val person = Person("Meli", 25)
+
+        val programmer = Programmer("Ivan", 29, "Kotlin")
+        programmer.work();
+        programmer.sayLanguage()
+        programmer.goToWork()
+        programmer.drive()
+        val designer = Designer("Brais", 30)
+        designer.work()
+        designer.goToWork()
     }
 }
